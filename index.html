@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1,
+                   maximum-scale=1,
+                   viewport-fit=cover">
+
+    <meta name="theme-color" content="#21121f">
+
+    <title>Little Moments ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="floating-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>✦</span>
+        <span>♡</span>
+    </div>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main id="homeScreen" class="screen active">
+
+        <div class="brand-mark">
+            ♡
+        </div>
+
+        <p class="eyebrow">
+            A tiny place for us
+        </p>
+
+        <h1>
+            Little<br>
+            Moments
+        </h1>
+
+        <p class="subtitle">
+            Even when we're miles apart,<br>
+            we can still make memories together.
+        </p>
+
+        <button id="createBtn" class="primary-btn">
+            Create our booth
+            <span>♡</span>
+        </button>
+
+        <button id="joinBtn" class="ghost-btn">
+            Join a booth
+        </button>
+
+        <p class="footer-note">
+            made with love ♡
+        </p>
+
+    </main>
+
+
+    <!-- ================= CREATE ROOM ================= -->
+
+    <main id="createScreen" class="screen">
+
+        <button class="back-btn" data-back>
+            ←
+        </button>
+
+        <div class="small-heart">♡</div>
+
+        <p class="eyebrow">
+            Step 1
+        </p>
+
+        <h2>
+            Create our<br>
+            little booth
+        </h2>
+
+        <p class="description">
+            I'll make a private room for the two of us.
+            Then you can send the invitation to her.
+        </p>
+
+        <button id="startCreateBtn" class="primary-btn">
+            Open camera
+            <span>📷</span>
+        </button>
+
+    </main>
+
+
+    <!-- ================= WAITING ROOM ================= -->
+
+    <main id="waitingScreen" class="screen">
+
+        <div class="top-row">
+            <button class="back-btn" data-back>
+                ←
+            </button>
+
+            <span class="live-dot">
+                PRIVATE BOOTH
+            </span>
+        </div>
+
+        <div class="small-heart">
+            ♡
+        </div>
+
+        <p class="eyebrow">
+            Your room is ready
+        </p>
+
+        <h2>
+            Waiting for<br>
+            Babyy ♡
+        </h2>
+
+        <p class="description">
+            Send her the invitation below.
+            She'll join this exact room.
+        </p>
+
+
+        <div class="room-card">
+
+            <span>
+                ROOM CODE
+            </span>
+
+            <strong id="roomCode">
+                ------
+            </strong>
+
+        </div>
+
+
+        <button id="shareRoomBtn"
+                class="primary-btn">
+
+            Invite Babyy
+            <span>↗</span>
+
+        </button>
+
+
+        <button id="copyRoomBtn"
+                class="ghost-btn">
+
+            Copy invitation link
+
+        </button>
+
+
+        <div class="connection-status">
+
+            <div id="statusDot"
+                 class="status-dot"></div>
+
+            <span id="connectionText">
+                Waiting for her to join...
+            </span>
+
+        </div>
+
+
+        <div class="camera-preview waiting-preview">
+
+            <video id="hostVideo"
+                   autoplay
+                   muted
+                   playsinline></video>
+
+            <div class="camera-label">
+                YOU
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= JOIN SCREEN ================= -->
+
+    <main id="joinScreen" class="screen">
+
+        <button class="back-btn" data-back>
+            ←
+        </button>
+
+        <div class="small-heart">
+            ♡
+        </div>
+
+        <p class="eyebrow">
+            You've been invited
+        </p>
+
+        <h2>
+            Join your<br>
+            little booth ♡
+        </h2>
+
+        <p class="description">
+            Your person is waiting for you.
+        </p>
+
+
+        <div class="invite-card">
+
+            <div class="invite-avatar">
+                ♡
+            </div>
+
+            <strong>
+                Our Little Moments
+            </strong>
+
+            <span>
+                A private photo booth for two
+            </span>
+
+        </div>
+
+
+        <button id="joinRoomBtn"
+                class="primary-btn">
+
+            Join the booth
+            <span>♡</span>
+
+        </button>
+
+    </main>
+
+
+    <!-- ================= BOOTH ================= -->
+
+    <main id="boothScreen" class="screen booth-screen">
+
+        <div class="booth-header">
+
+            <div>
+                <p class="eyebrow">
+                    OUR LITTLE BOOTH
+                </p>
+
+                <h3 id="momentTitle">
+                    Your cutest smile ♡
+                </h3>
+            </div>
+
+            <div id="momentCounter"
+                 class="counter">
+                1 / 4
+            </div>
+
+        </div>
+
+
+        <div class="camera-grid">
+
+            <div class="camera-card">
+
+                <video id="localVideo"
+                       autoplay
+                       muted
+                       playsinline></video>
+
+                <span class="camera-name">
+                    YOU
+                </span>
+
+            </div>
+
+
+            <div class="camera-card">
+
+                <video id="remoteVideo"
+                       autoplay
+                       playsinline></video>
+
+                <span class="camera-name">
+                    BABYY
+                </span>
+
+                <div id="remoteWaiting"
+                     class="remote-waiting">
+
+                    Waiting for her... ♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="countdown"
+             class="countdown">
+        </div>
+
+
+        <div class="booth-bottom">
+
+            <p id="promptText"
+               class="prompt">
+                Give me your cutest smile ♡
+            </p>
+
+            <button id="captureBtn"
+                    class="shutter"
+                    disabled>
+
+                <span></span>
+
+            </button>
+
+            <p id="captureHint"
+               class="capture-hint">
+
+                Waiting for both of you...
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= RESULT ================= -->
+
+    <main id="resultScreen"
+          class="screen result-screen">
+
+        <div class="result-top">
+
+            <p class="eyebrow">
+                FOUR LITTLE MOMENTS
+            </p>
+
+            <h2>
+                It's ours. ♡
+            </h2>
+
+            <p>
+                A tiny memory from two places.
+            </p>
+
+        </div>
+
+
+        <div class="strip-wrapper">
+
+            <img id="finalStrip"
+                 alt="Our photo strip">
+
+        </div>
+
+
+        <div class="customize">
+
+            <label>
+                Caption
+            </label>
+
+            <input id="captionInput"
+                   type="text"
+                   maxlength="28"
+                   value="BABYY × TEMEN">
+
+            <label>
+                Choose a little mood
+            </label>
+
+            <div class="theme-buttons">
+
+                <button data-theme="classic">
+                    ♡ Classic
+                </button>
+
+                <button data-theme="blush">
+                    ♡ Blush
+                </button>
+
+                <button data-theme="midnight">
+                    ♡ Midnight
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="result-actions">
+
+            <button id="saveBtn"
+                    class="primary-btn">
+
+                Save to Photos
+                <span>↓</span>
+
+            </button>
+
+            <button id="shareBtn"
+                    class="ghost-btn">
+
+                Share our memory
+                <span>↗</span>
+
+            </button>
+
+            <button id="againBtn"
+                    class="text-btn">
+
+                Take another strip
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- hidden canvas -->
+
+    <canvas id="canvas"></canvas>
+
+
+    <!-- PeerJS -->
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
